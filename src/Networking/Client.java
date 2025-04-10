@@ -9,6 +9,10 @@ public class Client {
             Socket socket=new Socket("localhost",5000);
 
             //read message from server
+            InputStream input = socket.getInputStream();
+            BufferedReader reader= new BufferedReader(new InputStreamReader(input));
+
+            String message= reader.readLine();
 
         }
     }
