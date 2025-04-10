@@ -11,8 +11,15 @@ public class Server {
 
             Socket socket = serverSocket.accept();
             System.out.println("client connected");
+;
+            OutputStream output= socket.getOutputStream();
+            PrintWriter writer = new PrintWriter(output, true);
+            writer.println("Hello from the server");
 
-            Output
+            socket.close();
+            serverSocket.close()
+        }catch (IOException e){
+            e.printStackTrace();
         }
     }
 }
