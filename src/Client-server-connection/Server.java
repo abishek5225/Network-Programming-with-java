@@ -17,7 +17,7 @@ public class Server {
             writer.println("Hello from the server");
 
             socket.close();
-            serverSocket.close()
+            serverSocket.close();
         }catch (IOException e){
             e.printStackTrace();
         }
