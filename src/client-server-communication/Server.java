@@ -13,6 +13,9 @@ public class Server {
         System.out.println("client connected");
 
         //Input and output setup
+        BufferedReader input=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter output= new PrintWriter(socket.getOutputStream(), true);
+
 
 
 
