@@ -13,7 +13,16 @@ public class Client {
             BufferedReader consoleInput=new BufferedReader(new InputStreamReader(System.in));
 
             String serverMessage, clientReply;
+            while(true){
+                //send message to server
+                System.out.println("Client:");
+                clientReply = consoleInput.readLine();
+                output.println(clientReply);
 
+                if(clientReply.equalsIgnoreCase("exit")) break;
+
+                // Read server reply
+            }
         }catch (Exception e){
             e.printStackTrace();
         }
