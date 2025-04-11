@@ -1,4 +1,4 @@
-package client-server-communication;
+
 
 import java.io.*;
 import java.net.*;
@@ -43,4 +43,3 @@ public class Server {
         }
         }
     }
-}
