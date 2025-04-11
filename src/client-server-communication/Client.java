@@ -22,7 +22,12 @@ public class Client {
                 if(clientReply.equalsIgnoreCase("exit")) break;
 
                 // Read server reply
+                serverMessage = input.readLine();
+                if(serverMessage.equalsIgnoreCase("exit")) break;
+                System.out.println("server: "+ serverMessage);
             }
+            socket.close();
+            System.out.println("connection closed...");
         }catch (Exception e){
             e.printStackTrace();
         }
