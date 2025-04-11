@@ -16,7 +16,14 @@ public class Server {
         BufferedReader input=new BufferedReader(new InputStreamReader(socket.getInputStream()));
         PrintWriter output= new PrintWriter(socket.getOutputStream(), true);
 
+        //for typing in terminal
+        BufferedReader consoleInput= new BufferedReader(new InputStreamReader(System.in));
 
+        String clientMessage, serverReply;
+
+        while(true){
+
+        }
 
 
 
