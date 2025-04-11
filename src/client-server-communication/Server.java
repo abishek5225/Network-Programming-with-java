@@ -22,7 +22,17 @@ public class Server {
         String clientMessage, serverReply;
 
         while(true){
+        //Read from client
+            clientMessage= input.readLine();
+            if(clientMessage.equalsIgnoreCase("exit")) break;
+            System.out.println("client"+clientMessage);
 
+            //send reply
+            System.out.println("Server:");
+            serverReply= consoleInput.readLine();
+            output.println(serverReply);
+
+            if(serverReply.equalsIgnoreCase("exit")) break;
         }
 
 
