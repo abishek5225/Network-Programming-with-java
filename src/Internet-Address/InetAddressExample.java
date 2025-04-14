@@ -3,7 +3,7 @@ import java.net.*;
 public class InetAddressExample{
     public static void main(String[] args) {
         try{
-            /* 
+            
             InetAddress[] address = InetAddress.getAllByName("www.google.com");
             for (InetAddress addresscontainer : address) {
                 System.out.println("Host name: " + addresscontainer.getHostName());
@@ -13,14 +13,18 @@ public class InetAddressExample{
 
                 System.out.println("Host name: " + address.toString());
                 System.out.println();
+                System.out.println("Host name: " + addresscontainer.getHostName());
+                System.out.println("IP address: " + addresscontainer.getHostAddress());
+                System.out.println("Canonical host name: " + addresscontainer.getCanonicalHostName());
+                System.out.println();
 
                 
             }
-            */
-
             
 
             
+
+          /*  
             
             InetAddress address=InetAddress.getByName("8.8.8.8");
 
@@ -42,6 +46,7 @@ public class InetAddressExample{
             // }else{
             //     System.out.println("Unknown address type");
             // }
+            */
 
 
         } catch (java.lang.Exception e) {
