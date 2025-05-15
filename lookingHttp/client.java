@@ -30,9 +30,20 @@ public class client {
 
                 //Read response
                 String line;
-                
+                int blankLines =0;
+                while ((line=in.readLine()) != null) {
+                    System.out.println(line);
+                    if(line.isEmpty()){
+                        blankLines++;
+                        if (blankLines==1) {
+                            break; //end of header
+                        }
+                    }
+                }
+                Thread.sleep(2000);//waits for 2s
+
             }
-            
+            System.out.println("All request sent. closing client");
             
         } catch (Exception e) {
            System.out.println(e);
