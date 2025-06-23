@@ -1,5 +1,6 @@
 package SecureSocket;
 
+import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 
 public class client {
@@ -9,6 +10,8 @@ public class client {
 
        try{
         SSLSocketFactory Factory=(SSLSocketFactory)SSLSocketFactory.getDefault();
+
+        SSLSocket socket=(SSLSocket)Factory.createSocket(host,port);
        }catch(Exception ex){
         System.out.println("Following exception occured: "+ex);
        }
