@@ -1,5 +1,7 @@
 package SecureSocket;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 import javax.net.ssl.SSLSocket;
@@ -21,6 +23,11 @@ public class client {
         out.println("Host: "+host);
         out.println("Connectikon close");
         out.println();//ENd a request header
+
+        //read response
+        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+        
 
        }catch(Exception ex){
         System.out.println("Following exception occured: "+ex);
