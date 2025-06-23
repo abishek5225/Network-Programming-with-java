@@ -2,6 +2,7 @@ package SecureSocket;
 
 import javax.net.ssl.SSLServerSocket;
 import javax.net.ssl.SSLServerSocketFactory;
+import javax.net.ssl.SSLSocket;
 
 public class second {
     public static void main(String[] args) {
@@ -13,7 +14,10 @@ public class second {
         SSLServerSocketFactory sslServerSocketFactory=(SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
 
         SSLServerSocket serverSocket=(SSLServerSocket) sslServerSocketFactory.createServerSocket(port);
-        System.out.println("");
+        System.out.println("Server is running on port" +port);
+
+        SSLSocket clientSocket=(SSLSocket) serverSocket.accept();
+        System.out.println("Client connected");
         }catch(Exception ex){
             System.out.println("Exception occured: "+ ex);
         }
