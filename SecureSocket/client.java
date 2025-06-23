@@ -31,8 +31,10 @@ public class client {
         while((line=in.readLine()) != null){
             System.out.println(line);
         }
-        
 
+        out.close();
+        in.close();
+        socket.close();
 
 
        }catch(Exception ex){
