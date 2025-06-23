@@ -15,7 +15,7 @@ public class second {
         SSLServerSocket serverSocket=(SSLServerSocket) sslServerSocketFactory.createServerSocket(port);
         System.out.println("");
         }catch(Exception ex){
-            
+            System.out.println("Exception occured: "+ ex);
         }
     }
 }
