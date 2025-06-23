@@ -16,6 +16,9 @@ public class first {
             BufferedReader in=new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String response=in.readLine();
 
+            System.out.println("Server:"+response);
+            socket.close();
+
         }catch(Exception ex){
             System.out.println("Exception occured:" +ex);
         }
