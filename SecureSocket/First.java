@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 
-public class client {
+public class First {
     public static void main(String[] args) {
        String host= "www.google.com";
        int port= 443;
