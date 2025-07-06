@@ -9,7 +9,13 @@ public class client{
         
         InetAddress address =InetAddress.getByName("locslhost");
         int port= 9876;
-        
+        byte[] buffer=message.getBytes();
+
+        DatagramPacket packet = new DatagramPacket(buffer, port);
+        socket.send(packet);
+
+        //receive response from server
+
         
     }
 }
