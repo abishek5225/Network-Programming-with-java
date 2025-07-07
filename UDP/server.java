@@ -1,6 +1,8 @@
 import java.io.*;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.net.Inet4Address;
+import java.net.InetAddress;
 
 public class server{
     public static void main(String[] args)throws Exception {
@@ -12,7 +14,18 @@ public class server{
         while (true) {
             DatagramPacket request=new DatagramPacket(buffer,buffer.length, 0);
             socket.receive(request);
+
+            String message=new String(request.getData(), 0,request.getLength());
+            System.out.println("CLient: " +message);
+
+            String response="Hello from the server";
+            byte[] Severresponse=response.getBytes();
+
+            InetAddress clientAddrss=request.getAddress();
+            int clientport=request.getPort();
             
+
+
         }
     }
 }
