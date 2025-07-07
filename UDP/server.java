@@ -19,13 +19,13 @@ public class server{
             System.out.println("CLient: " +message);
 
             String response="Hello from the server";
-            byte[] Severresponse=response.getBytes();
+            byte[] Serverresponse=response.getBytes();
 
             InetAddress clientAddrss=request.getAddress();
             int clientport=request.getPort();
-            
 
-
+            DatagramPacket reply= new DatagramPacket(Serverresponse,Serverresponse.length, clientAddrss,clientport);
+            socket.send(reply);
         }
     }
 }
