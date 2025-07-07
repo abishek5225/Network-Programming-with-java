@@ -4,9 +4,9 @@ import java.net.DatagramSocket;
 import java.net.Inet4Address;
 import java.net.InetAddress;
 
-public class server{
+public class serverExample{
     public static void main(String[] args)throws Exception {
-        DatagramSocket socket=new DatagramSocket(9876);
+        DatagramSocket socket=new DatagramSocket(9999);
         byte[] buffer=new byte[1024];
         
         System.out.println("Server is running");
