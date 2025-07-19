@@ -1,4 +1,4 @@
-package PUriUrl;
+package Uri;
 
 import java.net.URL;
 
